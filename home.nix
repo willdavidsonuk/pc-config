@@ -19,31 +19,32 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  # Xmobar
-  # programs.xmobar = {
-  #   enable = true;
-  # };
-
-  # Neovim
-  programs.neovim = {
-    enable = true; 
-    defaultEditor = true;
+  # PROGRAMS
+  programs = {
+    # xmobar.enable = true;
+    neovim = {
+      enable = true; 
+      defaultEditor = true;
+    };
+    firefox.enable = true;
+    kitty = {
+      enable = true;
+      theme = "Everforest Dark Hard";
+    };
+    rofi.enable = true;
+    vscode = {
+      enable = true;
+      extensions = [
+        pkgs.vscode-extensions.scalameta.metals
+        pkgs.vscode-extensions.scala-lang.scala
+      ];
+    };
+    sbt.enable = true;
   };
 
-  # Firefox
-  programs.firefox = {
-    enable = true;
-  };
-
-  # Kitty
-  programs.kitty = {
-    enable = true;
-    theme = "Everforest Dark Hard";
-  };
-
-  # Rofi
-  programs.rofi = {
-    enable = true;
-  };
+  # PACKAGES
+  home.packages = with pkgs; [
+    jetbrains.idea-community
+  ];
 }
 

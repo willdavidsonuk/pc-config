@@ -60,15 +60,19 @@
     enable = true;
     layout = "gb";
     xkbVariant = "";
-    windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
-      extraPackages = haskellPackages: [
-        haskellPackages.xmobar
-      ];
-    };
+    # windowManager.xmonad = {
+    #   enable = true;
+    #   enableContribAndExtras = true;
+    #   extraPackages = haskellPackages: [
+    #     haskellPackages.xmobar
+    #   ];
+    # };
     desktopManager = {
+      gnome.enable = true;
       wallpaper.mode = "fill";
+    };
+    displayManager = {
+      gdm.enable = true;
     };
   };
 
