@@ -40,11 +40,42 @@
       ];
     };
     sbt.enable = true;
+    # mbsync.enable = true;
+    # msmtp.enable = true;
+    thunderbird = {
+      enable = true;
+      profiles.davidsondigital = {
+        isDefault = true;
+      };
+    };
   };
 
   # PACKAGES
   home.packages = with pkgs; [
     jetbrains.idea-community
   ];
+
+  # EMAIL
+  # accounts.email = {
+  #   accounts.davidsondigital = {
+  #     flavor = "outlook.office365.com";
+  #     address = "will@davidsondigital.uk";
+  #     # mbsync = {
+  #     #   enable = true;
+  #     #   create = "maildir";
+  #     # };
+  #     # msmtp.enable = true;
+  #     primary = true;
+  #     realName = "Will Davidson";
+  #     signature = {
+  #       text = ''
+  #         Will Davidson
+  #       '';
+  #       showSignature = "append";
+  #     };
+  #     userName = "will@davidsondigital.uk";
+  #     thunderbird.enable = true;
+  #   };
+  # };
 }
 

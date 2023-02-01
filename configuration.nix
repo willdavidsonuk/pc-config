@@ -54,6 +54,7 @@
     enable = true;
     mediaKeys.enable = true;
   };
+  hardware.pulseaudio.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -68,11 +69,14 @@
     #   ];
     # };
     desktopManager = {
-      gnome.enable = true;
+      # gnome.enable = true;
+      # xfce.enable = true;
+      plasma5.enable = true;
       wallpaper.mode = "fill";
     };
     displayManager = {
-      gdm.enable = true;
+      # gdm.enable = true;
+      sddm.enable = true;
     };
   };
 
@@ -92,8 +96,9 @@
   environment.systemPackages = with pkgs; [
      wget
      git
-     xmobar
-     arandr
+     # xmobar
+     # arandr
+     plasma-pa
   ];
 
   # Fonts
