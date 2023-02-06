@@ -71,7 +71,8 @@
     desktopManager = {
       # gnome.enable = true;
       # xfce.enable = true;
-      plasma5.enable = true;
+      # plasma5.enable = true;
+      cinnamon.enable = true;
       wallpaper.mode = "fill";
     };
     displayManager = {
